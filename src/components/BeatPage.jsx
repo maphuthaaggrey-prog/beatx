@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { beats } from './beats'; // Ensure this import is correct
-import logo from '../assets/logo.png'; // Ensure this import is correct
-
+import { Helmet } from "react-helmet";
+import { beats } from './beats'; 
+import logo from '../assets/logo.png'; 
 
 const BeatPage = () => {
     const { id } = useParams();
@@ -13,24 +13,30 @@ const BeatPage = () => {
         e.preventDefault();
         navigate(-1);
     };
+
     const [sortedBeats, setSortedBeats] = useState([]);
 
     useEffect(() => {
-  
-      const sorted = [...beats].sort((a, b) => new Date(b.date) - new Date(a.date));
-      setSortedBeats(sorted);
+        const sorted = [...beats].sort((a, b) => new Date(b.date) - new Date(a.date));
+        setSortedBeats(sorted);
     }, []);
-    const filteredBeats = sortedBeats.filter((item) => item.id !== id);
+
+    // Ensure you're comparing the right type for filtering
+    const filteredBeats = sortedBeats.filter((item) => item.id !== Number(id));
+
+    if (!beat) {
+        return <div>Beat not found</div>;  // Fallback if beat is not found
+    }
 
     return (
         <>
-        <Helmet>
-            <title>{beat.beat}</title>
-            <meta name="title" content={beat.beat} />
-            <meta name="url" content={window.location.href} />
-            <meta name="image" content={beat.image} />
+            <Helmet>
+                <title>{beat.beat}</title>
+                <meta name="description" content={beat.description} />
+                <meta name="url" content={window.location.href} />
+                <meta name="image" content={beat.image} />
+            </Helmet>
 
-       </Helmet>
             <main id="song-wrap">
                 <div className="navbar">
                     <a href="#" onClick={handleGoBack} className="back" id="back-button">
@@ -58,12 +64,14 @@ const BeatPage = () => {
                                 {beat.beatTrackList.map((trackItem, index) => (
                                     <p key={index}>{trackItem.track}</p>
                                 ))}
-                                <p style={{marginTop: '.6em', width: '80%'}}>The (Free) version of this beat is not available for streaming services (Spotify, Tidal, Apple Music, etc.)</p>
+                                <p style={{ marginTop: '.6em', width: '80%' }}>
+                                    The (Free) version of this beat is not available for streaming services (Spotify, Tidal, Apple Music, etc.)
+                                </p>
                             </div>
                             <h1 className="play-on">Play On</h1>
                             <div className="btns">
                                 <a href={beat.youtubeUrl} target="_blank" rel="noopener noreferrer">
-                                    <button id="youtube-url" style={{width: '50%', marginTop: '.3em'}} className="youtube">YouTube</button>
+                                    <button id="youtube-url" style={{ width: '50%', marginTop: '.3em' }} className="youtube">YouTube</button>
                                 </a>
                             </div>
                         </div>
@@ -72,29 +80,28 @@ const BeatPage = () => {
 
                 <div className="blog">
                     <div className="sub-heading">
-                        <div>
-                            <div className="sub">
-                                <h3>More Beats</h3>
-                            </div>
+                        <div className="sub">
+                            <h3>More Beats</h3>
                         </div>
                     </div>
                     <div className="album-box space">
                         <div id="singles">
                             <div id="single-image-container">
-                            {filteredBeats.map((beat) => (
-                                                <Link to={`/beat/${beat.id}`} key={beat.id}>
-                                                    <img
-                                                        src={beat.image}
-                                                        loading="lazy"
-                                                        className="skeleton"
-                                                    />
-                                <div>
-                                        <p id="single-name">{beat.name}</p>
-                                        <p id="single-name">{beat.beat}</p>
-                                        <p id="date-mod">{beat.date}</p>
-                                </div>
-                                           </Link>
-                                        ))}
+                                {filteredBeats.map((beat) => (
+                                    <Link to={`/beat/${beat.id}`} key={beat.id}>
+                                        <img
+                                            src={beat.image}
+                                            loading="lazy"
+                                            className="skeleton"
+                                            alt={beat.name}
+                                        />
+                                        <div>
+                                            <p id="single-name">{beat.name}</p>
+                                            <p id="single-name">{beat.beat}</p>
+                                            <p id="date-mod">{beat.date}</p>
+                                        </div>
+                                    </Link>
+                                ))}
                             </div>
                         </div>
                     </div>
