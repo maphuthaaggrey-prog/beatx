@@ -15,7 +15,6 @@ const BeatsContainer = () => {
     return ( 
         <>
         <Helmet>
-            <title>Beats</title>
             <meta name="url" content={window.location.href} />
 
 
