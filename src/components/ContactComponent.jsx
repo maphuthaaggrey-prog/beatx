@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const ContactComponent = () => {
     const [loading, setLoading] = useState(false);
@@ -63,6 +64,11 @@ const ContactComponent = () => {
     };
 
     return (
+        <>
+        <Helmet>
+            <title>Contact</title>
+        </Helmet>
+       
         <main id="song-wrap">
             <div className="navbar">
                 <a href="#close" className="back" id="back-button" onClick={handleGoBack}>
@@ -153,6 +159,7 @@ const ContactComponent = () => {
             
          
         </main>
+        </>
     );
 };
 

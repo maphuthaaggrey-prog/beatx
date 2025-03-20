@@ -6,8 +6,6 @@ const Home = () => {
         <Helmet>
             <title>Veteran Beatx</title>
             <meta name="url" content={window.location.href} />
-
-
        </Helmet>
             <HomeComponent />
         </>

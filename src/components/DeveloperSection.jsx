@@ -3,6 +3,7 @@ import gmail from '../assets/icons8-gmail (1) 1.png'
 import location from '../assets/icons8-location-60.png'
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png'
+import { Helmet } from 'react-helmet';
 import picture from '../assets/aggrey.jpg'
 
 const DeveloperSection = () => {
@@ -11,6 +12,9 @@ const DeveloperSection = () => {
     };
     return (
        <> 
+       <Helmet>
+            <title>Developer</title>
+        </Helmet>
         <section className="developer-section">
             <div className="navbar">
                     <a href="#close" className="back" id="back-button" onClick={handleGoBack}>

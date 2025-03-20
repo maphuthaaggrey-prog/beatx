@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from '../assets/logo.png'
+import { Helmet } from "react-helmet";
 
 const Info = () => {
     
@@ -8,6 +9,9 @@ const Info = () => {
     };
     return ( 
         <>
+        <Helmet>
+            <title>Info and Policies</title>
+        </Helmet>
 
         <main id="song-wrap">
         <div className="navbar">

@@ -3,6 +3,7 @@ import geniuxLogo from '../assets/covers/geniux.svg'
 import majitaLogo from '../assets/covers/Majita Mag Logo-02 1.svg'
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png'
+import { Helmet } from 'react-helmet';
 
 const AboutComponent = () => {
 
@@ -11,6 +12,9 @@ const AboutComponent = () => {
     };
     return (
         <>
+               <Helmet>
+                    <title>About</title>
+                </Helmet>
         <main id="song-wrap">
                 <div className="navbar">
                     <a href="#close" className="back" id="back-button" onClick={handleGoBack}>

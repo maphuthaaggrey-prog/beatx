@@ -1,6 +1,7 @@
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const Policy = () => {
 
@@ -14,7 +15,11 @@ const Policy = () => {
     return ( 
 
 <>
+<Helmet>
+    <title>Policy</title>
+</Helmet>
 <main id="song-wrap">
+    
                 <div className="navbar">
                     <a href="#close" className="back" id="back-button" onClick={handleGoBack}>
                         <i className="fa-solid fa-arrow-left"></i>

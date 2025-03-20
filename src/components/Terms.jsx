@@ -1,6 +1,7 @@
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const Terms = () => {
 
@@ -11,6 +12,10 @@ const Terms = () => {
     return ( 
 
 <>
+        <Helmet>
+            <title>Terms and Conditions</title>
+        </Helmet>
+
 <main id="song-wrap">
                 <div className="navbar">
                     <a href="#close" className="back" id="back-button" onClick={handleGoBack}>
