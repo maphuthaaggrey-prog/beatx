@@ -48,7 +48,7 @@ const Sidebar = () => {
                             <i>
                                 <img src={logo} className ="vet-logo" />
                             </i>
-                            <a href="" className="close-btn" onClick={toggleMenu}>
+                            <a className="close-btn" onClick={toggleMenu}>
                                 <i className="fa-solid fa-arrow-left"  ></i>
                             </a>
                                 <Link to="/" onClick={toggleMenu}>
