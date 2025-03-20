@@ -44,7 +44,7 @@ const AboutComponent = () => {
                             <div className="visit">
                                 <div style={{marginRight: '5em'}}>
                                     <p>My Story on Majita Mag</p>
-                                    <a href="https://www.majitamag.co.za/" target="_blank"><img src={majitaLogo} width="60px" style={{marginTop: '1em', marginBottom: '1em'}} /></a>
+                                    <a href="https://www.majitamag.co.za/majitamonday/veteran-beatx" target="_blank"><img src={majitaLogo} width="60px" style={{marginTop: '1em', marginBottom: '1em'}} /></a>
                                 </div>
                                     <div>
                                         <p>Geniux Music</p>

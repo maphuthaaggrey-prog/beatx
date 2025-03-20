@@ -7,7 +7,7 @@ import { beats } from './beats';
 import { mixtapes } from './mixtapes'; 
 import { singles } from './singles';
 import { albums } from './albums';
-import { Helmet } from 'react-helmet';
+
 
 
 const MusicComponent = () => {
@@ -50,9 +50,7 @@ const MusicComponent = () => {
   
     return ( 
         <>
-        <Helmet>
-            <title>Music</title>
-        </Helmet>
+
 
        <main className="target-section">
             <h1 className="header">Music</h1>
