@@ -17,6 +17,7 @@ import marijuana from "../assets/covers/Marijuana.jpeg"
 import success from "../assets/covers/Success - Cover.jpg"
 import ptl from "../assets/covers/Praise The Lord - Cover.jpeg"
 import respect from "../assets/covers/respect.jpeg"
+import maleboo from "../assets/covers/maleboo.jpg"
 
 export const singles = [
     {
@@ -271,5 +272,18 @@ export const singles = [
         genre: "Rap/Hip Hop",
         youtubeUrl: "",
         geniuxUrl: "https://music.geniux.co.za/playing/19104390562",
+    },
+    {
+        id:20,
+        name: "Maleboo",
+        single: "Buti (Ft. Shibu Molomo)",
+        composer: "Maleboo & Maphutha Aggrey",
+        image: maleboo,
+        type: "Single",
+        description: `Buti (Ft. Shibu Molomo) Prod. Veteran Beatx featured in Maleboo's Album "Lesole Ntweng"`,
+        date: "Mar 29 2025",
+        genre: "Rap/Hip Hop",
+        youtubeUrl: "https://youtu.be/tU9DaUAXW3I?si=HHOkxn4ZqENEzIwn",
+        geniuxUrl: "",
     },
 ]
