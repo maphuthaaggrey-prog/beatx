@@ -17,6 +17,7 @@ import marijuana from "../assets/covers/Marijuana.jpeg"
 import success from "../assets/covers/Success - Cover.jpg"
 import ptl from "../assets/covers/Praise The Lord - Cover.jpeg"
 import respect from "../assets/covers/respect.jpeg"
+import pmt from "../assets/covers/pmt.jpeg"
 import maleboo from "../assets/covers/maleboo.jpg"
 
 export const singles = [
@@ -284,6 +285,19 @@ export const singles = [
         date: "March 29 2025",
         genre: "Rap/Hip Hop",
         youtubeUrl: "https://youtu.be/tU9DaUAXW3I?si=HHOkxn4ZqENEzIwn",
+        geniuxUrl: "",
+    },
+    {
+        id:21,
+        name: "Poker Face",
+        single: "Pay My Taxes",
+        composer: "Poker Face & Maphutha Aggrey",
+        image: pmt,
+        type: "Single",
+        description: `Poker Face's first drop of the year , tap in it’s only getting crazier from here appreciate yall love and support thus far 2025 we turning it up a notch`,
+        date: "March 28 2025",
+        genre: "Rap/Hip Hop",
+        youtubeUrl: "https://youtu.be/noUKEugsmzo?si=aUWHSQcYVgzKBkn5",
         geniuxUrl: "",
     },
 ]
