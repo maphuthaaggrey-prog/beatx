@@ -281,7 +281,7 @@ export const singles = [
         image: maleboo,
         type: "Single",
         description: `Buti (Ft. Shibu Molomo) Prod. Veteran Beatx featured in Maleboo's Album "Lesole Ntweng"`,
-        date: "Mar 29 2025",
+        date: "March 29 2025",
         genre: "Rap/Hip Hop",
         youtubeUrl: "https://youtu.be/tU9DaUAXW3I?si=HHOkxn4ZqENEzIwn",
         geniuxUrl: "",
