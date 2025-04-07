@@ -5,6 +5,7 @@ import bkm from "../assets/covers/Bad Kid.jpeg"
 import laco from "../assets/covers/Laco cargo.jpeg"
 import paramount from "../assets/covers/Paramount Cover.jpg"
 import mott from "../assets/covers/Bfore OTT.jpeg"
+import pressurePack from "../assets/covers/pressure-pack.jpg"
 
 export const albums = [
     {
@@ -193,6 +194,26 @@ export const albums = [
             { track: "12. Overall"},
             { track: `13. Sexy Song`},
             { track: "14. Rod's Outro"},
+            { track: " "},
+            ]
+    
+    },
+    {
+        id:8,
+        name: "Veteran Beatx",
+        album: "PRESSURE PACK VOL. 1",
+        composer: "Maphutha Aggrey",
+        image: pressurePack,
+        type: "Album",
+        date: "April 6 2025",
+        description: "Tracklist:",
+        youtubeUrl: "",
+        geniuxUrl: "",
+        albumTrackList: [
+            { track: "1. No Pressure (with. SASS"},
+            { track: "2. Shlide (with. Manila R)"},
+            { track: `3. Interlude`},
+            { track: "4. Pay My Taxes (with. Tanaka"},
             { track: " "},
             ]
     
