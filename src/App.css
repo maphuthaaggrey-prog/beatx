@@ -29,6 +29,29 @@ a:focus, a:visited, a:active {
     outline: none;
 }
 
+
+/* For the entire page */
+::-webkit-scrollbar {
+    width: 7px; /* Width of the scrollbar */
+  }
+  
+  /* Track (the background) */
+  ::-webkit-scrollbar-track {
+    background: #303030;
+  }
+  
+  /* Handle (the draggable part) */
+  ::-webkit-scrollbar-thumb {
+    background: #6d6d6d;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #464646;
+  }
+
+
 .vet-logo {
     width: 16%;
     margin-left: 3em;
